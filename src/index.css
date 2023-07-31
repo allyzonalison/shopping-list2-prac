@@ -1,13 +1,152 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10vh 15vh 65vh 10hv;
+}
+
+.header {
+  padding: 1rem;
+  grid-column: 1 / -1;
+  background-color: #373737;
+  height: 10vh;
+}
+
+.title-header {
+  font-weight: bold;
+  font-size: 4.5rem;
+  color: white;
+  text-align: center;
+}
+
+.form {
+  text-align: center;
+  padding: 1rem;
+  grid-column: 1 / -1;
+  grid-template-columns: 1 / -1;
+  background-color: #505050;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+input {
+  height: 20px;
+  font-size: 18px;
+  padding: 2rem;
+}
+
+select {
+  height: 20px;
+}
+
+.btn-add {
+  padding: 1.5rem;
+  border-radius: 25px;
+  background-color: aquamarine;
+  border: none;
+}
+
+.left-container {
+  background-color: #9e9e9e;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  height: 65vh;
+  overflow-y: scroll;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: min-content;
+}
+
+.right-container {
+  background-color: #976767;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+}
+
+.item-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: white;
+  width: 30rem;
+  height: 20rem;
+  padding: 2.5rem;
+}
+
+.item-box p {
+  font-size: 1.6rem;
+}
+
+.item-name {
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-update,
+.btn-save {
+  background-color: blue;
+  color: white;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-delete,
+.btn-cancel {
+  background-color: red;
+  color: white;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.update-form {
+  margin-top: 5rem;
+  background-color: #fff;
+  padding: 2.5rem;
+  width: 60%;
+  height: 350px;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+input::placeholder {
+  opacity: 0.2;
+}
+
+.footer {
+  background-color: #d9d9d9;
+  grid-column: 1 / -1;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.footer p {
+  font-size: 3.5rem;
 }
